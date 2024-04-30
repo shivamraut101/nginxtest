@@ -1,6 +1,10 @@
 FROM node:lts-alpine
 
-WORKDIR /usr/app
+# Set the working directory inside the container
+WORKDIR /nginxtest
+
+# Install npm explicitly
+RUN apk add --no-cache npm
 
 COPY package*.json ./
 
